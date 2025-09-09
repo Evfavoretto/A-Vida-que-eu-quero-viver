@@ -226,20 +226,19 @@
     <section class="card" aria-labelledby="cta2" style="margin-top:22px;text-align:center">
       <h2 id="cta2" style="margin-top:0">garanta sua vaga agora</h2>
       <p class="sub">As informações e links serão enviados somente dentro do grupo.</p>
-      <a class="cta" href="<a class="cta" 
-   href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
+      <a class="cta" href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
    target="_blank" 
-   rel="noopener">💬 Entrar no grupo de WhatsApp</a>" target="_blank" rel="noopener">💬 entrar no grupo de whatsapp</a>
+   rel="noopener">💬 Entrar no grupo de WhatsApp</a>"
       <p class="sub" style="margin-top:10px">📅 23, 24 e 25/10 • 🕖 19h • 🎥 YouTube</p>
     </section>
 
     <div class="sticky-bar" aria-hidden="false">
       <div class="sticky-inner">
         <span>⏳ Começa em: <span class="countdown">calculando…</span></span>
-        <a class="cta" href="<a class="cta" 
+        <a class="cta"
    href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
    target="_blank" 
-   rel="noopener">💬 Entrar no grupo de WhatsApp</a>" target="_blank" rel="noopener" style="padding:10px 14px;font-weight:700">garantir vaga</a>
+   rel="noopener">💬 GARANTIR MINHA VAGA</a>"
       </div>
     </div>
   </main>
