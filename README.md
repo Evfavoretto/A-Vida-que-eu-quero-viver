@@ -2,14 +2,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Workshop | AVidaQueEuQuero+Viver</title>
+  <title>Workshop | A Vida Que Eu Quero Viver</title>
   <meta name="description" content="Workshop gratuito de 3 noites (23, 24 e 25 de outubro, às 19h, ao vivo no YouTube) para soltar pesos do passado, liberar emoções que aprisionam e reescrever a sua história com leveza. Inscreva-se entrando no grupo de WhatsApp.">
   <meta name="theme-color" content="#6D5BD0">
   <!-- Open Graph -->
   <meta property="og:title" content="Workshop | A Vida Que Eu Quero Viver" />
   <meta property="og:description" content="3 Noites para soltar o passado e escolher leveza. 23–25/10 às 19h, ao vivo no YouTube. Entre no grupo de WhatsApp e garanta sua vaga." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=A+Vida+Que+Eu+Quero+Viver" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=A Vida Que Eu Quero Viver" />
   <meta property="og:url" content="https://seudominio.com/workshop" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2748%27 fill=%27%236D5BD0%27/%3E%3Ctext x=%2750%27 y=%2760%27 font-size=%2750%27 text-anchor=%27middle%27 fill=%27white%27%3E❤%3C/text%3E%3C/svg%3E" />
   <style>
@@ -130,7 +130,7 @@
     "eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode",
     "eventStatus":"https://schema.org/EventScheduled",
     "location":{"@type":"VirtualLocation","url":"https://youtube.com/"},
-    "image":"https://via.placeholder.com/1200x630.png?text=A Vida Que Eu Quero Viver",
+    "image":"https://via.placeholder.com/1200x630.png?text=A+Vida+Que+Eu+Quero+Viver",
     "description":"3 Noites para soltar pesos do passado, liberar emoções que aprisionam e reescrever a história com leveza. Inscreva-se entrando no grupo de WhatsApp.",
     "organizer":{"@type":"Organization","name":"Mentoria O Seu Lugar"}
   }
@@ -148,7 +148,7 @@
         <span class="chip">🎥 YouTube</span>
         <span class="chip">⏳ Começa em: <span class="countdown" aria-live="polite">calculando…</span></span>
       </div>
-      <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga>💬 Entrar no grupo de WhatsApp</a>"
+      <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga">💬 Entrar no grupo de WhatsApp</a>
       <p class="sub" style="margin-top:10px">❗ A confirmação e os links das aulas serão enviados apenas no grupo.</p>
     </div>
     <div class="illus card" role="img" aria-label="Ilustração do workshop">
