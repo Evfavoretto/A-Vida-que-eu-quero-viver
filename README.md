@@ -1,10 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Workshop | A Vida Que Eu Quero Viver</title>
   <meta name="description" content="Workshop gratuito de 3 noites (23, 24 e 25 de outubro, às 19h, ao vivo no YouTube) para soltar pesos do passado, liberar emoções que aprisionam e reescrever a sua história com leveza. Inscreva-se entrando no grupo de WhatsApp.">
   <meta name="theme-color" content="#6D5BD0">
   <!-- Open Graph -->
   <meta property="og:title" content="Workshop | A Vida Que Eu Quero Viver" />
-  <meta property="og:description" content="3 Noites para soltar o passado e escolher leveza. 23–25/10 às 19h, ao vivo no YouTube. Entre no grupo de WhatsApp e garanta sua vaga." />
-  <meta property="og:type" content="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp" />
+  <meta property="og:description" content="3 noites para soltar o passado e escolher leveza. 23–25/10 às 19h, ao vivo no YouTube. Entre no grupo de WhatsApp e garanta sua vaga." />
+  <meta property="og:type" content="website" />
   <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=A+Vida+Que+Eu+Quero+Viver" />
   <meta property="og:url" content="https://seudominio.com/workshop" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2748%27 fill=%27%236D5BD0%27/%3E%3Ctext x=%2750%27 y=%2760%27 font-size=%2750%27 text-anchor=%27middle%27 fill=%27white%27%3E❤%3C/text%3E%3C/svg%3E" />
@@ -127,7 +132,7 @@
     "eventStatus":"https://schema.org/EventScheduled",
     "location":{"@type":"VirtualLocation","url":"https://youtube.com/"},
     "image":"https://via.placeholder.com/1200x630.png?text=A+Vida+Que+Eu+Quero+Viver",
-    "description":"3 Noites para soltar pesos do passado, liberar emoções que aprisionam e reescrever a história com leveza. Inscreva-se entrando no grupo de WhatsApp.",
+    "description":"3 noites para soltar pesos do passado, liberar emoções que aprisionam e reescrever a história com leveza. Inscreva-se entrando no grupo de WhatsApp.",
     "organizer":{"@type":"Organization","name":"Mentoria O Seu Lugar"}
   }
   </script>
@@ -137,15 +142,15 @@
     <div>
       <span class="badge" aria-label="Workshop gratuito">Workshop gratuito • ao vivo no YouTube</span>
       <h1>A Vida Que Eu Quero Viver</h1>
-      <p class="sub">3 Noites para soltar os barulhos da mente, liberar emoções que aprisionam e reescrever sua história com leveza.</p>
+      <p class="sub">3 noites para soltar os barulhos da mente, liberar emoções que aprisionam e reescrever sua história com leveza.</p>
       <div class="meta" aria-label="Informações rápidas">
         <span class="chip">📅 23, 24 e 25 de outubro</span>
         <span class="chip">🕖 19h (ao vivo)</span>
         <span class="chip">🎥 YouTube</span>
         <span class="chip">⏳ começa em: <span class="countdown" aria-live="polite">calculando…</span></span>
       </div>
-      <a class="cta" href="[WHATSAPP_LINK_AQUI](https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp)" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga">💬 Entrar no grupo de WhatsApp</a>
-      <p class="sub" style="margin-top:10px">❗ A confirmação e os links das aulas serão enviados apenas no grupo.</p>
+      <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga">💬 Entrar no grupo de WhatsApp</a>
+      <p class="sub" style="margin-top:10px">❗ a confirmação e os links das aulas serão enviados apenas no grupo.</p>
     </div>
     <div class="illus card" role="img" aria-label="Ilustração do workshop">
       <div>
@@ -201,19 +206,19 @@
     </section>
 
     <section class="grid why" aria-labelledby="porque" style="margin-top:22px">
-      <h2 id="porque" style="grid-column:1/-1;margin:0 0 6px">Por que participar</h2>
+      <h2 id="porque" style="grid-column:1/-1;margin:0 0 6px">por que participar</h2>
       <div class="card">
         <ul>
-          <li>Online, gratuito e direto ao ponto</li>
+          <li>online, gratuito e direto ao ponto</li>
           <li>3 encontros ao vivo com práticas reais (nada de teoria solta)</li>
-          <li>Materiais para imprimir e aplicar na semana</li>
+          <li>materiais para imprimir e aplicar na semana</li>
         </ul>
       </div>
       <div class="card">
         <ul>
-          <li>Clareza emocional e mental para decidir o próximo passo</li>
-          <li>Leveza para relações e rotina</li>
-          <li>Um começo novo, com consciência</li>
+          <li>clareza emocional e mental para decidir o próximo passo</li>
+          <li>leveza para relações e rotina</li>
+          <li>um começo novo, com consciência</li>
         </ul>
       </div>
     </section>
@@ -237,5 +242,7 @@
     <div style="opacity:.9">© <span id="y"></span> Mentoria O Seu Lugar • Todos os direitos reservados</div>
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>
+</body>
+</html>
 </body>
 </html>
