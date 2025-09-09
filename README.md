@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Workshop | A Vida Que Eu Quero Viver</title>
+  <title>Workshop | AVidaQueEuQuero+Viver</title>
   <meta name="description" content="Workshop gratuito de 3 noites (23, 24 e 25 de outubro, às 19h, ao vivo no YouTube) para soltar pesos do passado, liberar emoções que aprisionam e reescrever a sua história com leveza. Inscreva-se entrando no grupo de WhatsApp.">
   <meta name="theme-color" content="#6D5BD0">
   <!-- Open Graph -->
@@ -148,7 +148,7 @@
         <span class="chip">🎥 YouTube</span>
         <span class="chip">⏳ Começa em: <span class="countdown" aria-live="polite">calculando…</span></span>
       </div>
-      <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga>💬 Entrar no grupo de WhatsApp</a>
+      <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga>💬 Entrar no grupo de WhatsApp</a>"
       <p class="sub" style="margin-top:10px">❗ A confirmação e os links das aulas serão enviados apenas no grupo.</p>
     </div>
     <div class="illus card" role="img" aria-label="Ilustração do workshop">
