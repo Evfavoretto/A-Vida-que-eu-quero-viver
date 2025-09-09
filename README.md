@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
@@ -131,7 +130,7 @@
     "eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode",
     "eventStatus":"https://schema.org/EventScheduled",
     "location":{"@type":"VirtualLocation","url":"https://youtube.com/"},
-    "image":"https://via.placeholder.com/1200x630.png?text=A+Vida+Que+Eu+Quero+Viver",
+    "image":"https://via.placeholder.com/1200x630.png?text=A Vida Que Eu Quero Viver",
     "description":"3 Noites para soltar pesos do passado, liberar emoções que aprisionam e reescrever a história com leveza. Inscreva-se entrando no grupo de WhatsApp.",
     "organizer":{"@type":"Organization","name":"Mentoria O Seu Lugar"}
   }
@@ -149,7 +148,7 @@
         <span class="chip">🎥 YouTube</span>
         <span class="chip">⏳ Começa em: <span class="countdown" aria-live="polite">calculando…</span></span>
       </div>
-      <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga">💬 Entrar no grupo de WhatsApp</a>
+      <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga>💬 Entrar no grupo de WhatsApp</a>
       <p class="sub" style="margin-top:10px">❗ A confirmação e os links das aulas serão enviados apenas no grupo.</p>
     </div>
     <div class="illus card" role="img" aria-label="Ilustração do workshop">
@@ -228,7 +227,7 @@
       <p class="sub">As informações e links serão enviados somente dentro do grupo.</p>
       <a class="cta" href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
    target="_blank" 
-   rel="noopener">💬 Entrar no grupo de WhatsApp</a>"
+   rel="noopener">💬 Entrar no grupo de WhatsApp</a>
       <p class="sub" style="margin-top:10px">📅 23, 24 e 25/10 • 🕖 19h • 🎥 YouTube</p>
     </section>
 
@@ -238,7 +237,7 @@
         <a class="cta"
    href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
    target="_blank" 
-   rel="noopener">💬 GARANTIR MINHA VAGA</a>"
+   rel="noopener">💬 GARANTIR MINHA VAGA</a>
       </div>
     </div>
   </main>
@@ -247,7 +246,5 @@
     <div style="opacity:.9">© <span id="y"></span> Mentoria O Seu Lugar • Todos os direitos reservados</div>
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>
-</body>
-</html>
 </body>
 </html>
