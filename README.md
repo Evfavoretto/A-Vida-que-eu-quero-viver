@@ -152,7 +152,10 @@
         <span class="chip">🎥 YouTube</span>
         <span class="chip">⏳ Começa em: <span class="countdown" aria-live="polite">calculando…</span></span>
       </div>
-      <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga">💬 Entrar no grupo de WhatsApp</a>
+          <a class="cta" 
+        href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
+        target="_blank" 
+        rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga">💬 Entrar no grupo de WhatsApp</a>
       <p class="sub" style="margin-top:10px">❗ A confirmação e os links das aulas serão enviados apenas no grupo.</p>
     </div>
     <div class="illus card" role="img" aria-label="Ilustração do workshop">
