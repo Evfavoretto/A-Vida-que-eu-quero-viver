@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#6D5BD0">
   <!-- Open Graph -->
   <meta property="og:title" content="Workshop | A Vida Que Eu Quero Viver" />
-  <meta property="og:description" content="3 noites para soltar o passado e escolher leveza. 23–25/10 às 19h, ao vivo no YouTube. Entre no grupo de WhatsApp e garanta sua vaga." />
+  <meta property="og:description" content="3 Noites para soltar o passado e escolher leveza. 23–25/10 às 19h, ao vivo no YouTube. Entre no grupo de WhatsApp e garanta sua vaga." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=A+Vida+Que+Eu+Quero+Viver" />
   <meta property="og:url" content="https://seudominio.com/workshop" />
@@ -132,7 +132,7 @@
     "eventStatus":"https://schema.org/EventScheduled",
     "location":{"@type":"VirtualLocation","url":"https://youtube.com/"},
     "image":"https://via.placeholder.com/1200x630.png?text=A+Vida+Que+Eu+Quero+Viver",
-    "description":"3 noites para soltar pesos do passado, liberar emoções que aprisionam e reescrever a história com leveza. Inscreva-se entrando no grupo de WhatsApp.",
+    "description":"3 Noites para soltar pesos do passado, liberar emoções que aprisionam e reescrever a história com leveza. Inscreva-se entrando no grupo de WhatsApp.",
     "organizer":{"@type":"Organization","name":"Mentoria O Seu Lugar"}
   }
   </script>
@@ -142,33 +142,33 @@
     <div>
       <span class="badge" aria-label="Workshop gratuito">Workshop gratuito • ao vivo no YouTube</span>
       <h1>A Vida Que Eu Quero Viver</h1>
-      <p class="sub">3 noites para soltar os barulhos da mente, liberar emoções que aprisionam e reescrever sua história com leveza.</p>
+      <p class="sub">3 Noites para soltar os barulhos da mente, liberar emoções que aprisionam e reescrever sua história com leveza.</p>
       <div class="meta" aria-label="Informações rápidas">
         <span class="chip">📅 23, 24 e 25 de outubro</span>
         <span class="chip">🕖 19h (ao vivo)</span>
         <span class="chip">🎥 YouTube</span>
-        <span class="chip">⏳ começa em: <span class="countdown" aria-live="polite">calculando…</span></span>
+        <span class="chip">⏳ Começa em: <span class="countdown" aria-live="polite">calculando…</span></span>
       </div>
       <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga">💬 Entrar no grupo de WhatsApp</a>
-      <p class="sub" style="margin-top:10px">❗ a confirmação e os links das aulas serão enviados apenas no grupo.</p>
+      <p class="sub" style="margin-top:10px">❗ A confirmação e os links das aulas serão enviados apenas no grupo.</p>
     </div>
     <div class="illus card" role="img" aria-label="Ilustração do workshop">
       <div>
         WORKSHOP • 3 NOITES
-        <small>consciência • liberação • novo começo</small>
+        <small>Consciência • Liberação • Novo começo</small>
       </div>
     </div>
   </header>
 
   <main class="wrap" role="main">
     <section class="card" aria-labelledby="convite">
-      <h2 id="convite">um convite simples: um novo começo</h2>
+      <h2 id="convite">Um convite simples: Um novo começo</h2>
       <p>
         Se a sua vida parece <em>travada</em> e você sente um peso que não sabe explicar, este encontro é para você.
         O passado não muda — mas o peso que você carrega dele pode mudar. Em três noites, vamos sair do automático,
         diminuir o barulho interno e criar um caminho real de leveza.
       </p>
-      <div class="notice" role="note">📩 para participar, basta clicar no botão e entrar no grupo de WhatsApp.</div>
+      <div class="notice" role="note">📩 Para participar, basta clicar no botão e entrar no grupo de WhatsApp.</div>
     </section>
 
     <section class="grid nights" aria-labelledby="noites" style="margin-top:22px">
@@ -178,29 +178,29 @@
         <h3>🌌 Noite 1 — O Barulho Invisível da Mente</h3>
         <p>Como pensamentos acelerados e autocobrança nos afastam do essencial. O falso “estar ocupado” que esconde ansiedade.</p>
         <ul>
-          <li>identificar ruídos (produtividade-fuga, controle, comparação)</li>
-          <li>microprática de presença: 4-7-8 + journaling</li>
-          <li>clareza do essencial (o que realmente importa agora)</li>
+          <li>Identificar ruídos (produtividade-fuga, controle, comparação)</li>
+          <li>Microprática de presença:</li>
+          <li>Clareza do essencial (O que realmente importa agora)</li>
         </ul>
       </article>
 
       <article class="card night" aria-label="Noite 2">
         <h3>🔥 Noite 2 — Emoções que Sabotam Meus Passos</h3>
-        <p>quando uma emoção vale mais que uma vida inteira: medo, culpa, vergonha e a arte de ressignificar.</p>
+        <p>Quando uma emoção vale mais que uma vida inteira: Medo, Culpa, Vergonha e a arte de ressignificar.</p>
         <ul>
-          <li>mapa da emoção raiz (psico + neuro)</li>
-          <li>soltar com método: reconhecer → acolher → ressignificar → ancorar</li>
-          <li>exercício “da dor ao recurso”</li>
+          <li>Mapa da emoção raiz (psico + neuro)</li>
+          <li>Soltar com método: reconhecer → acolher → ressignificar → ancorar</li>
+          <li>Exercício “da dor ao recurso”</li>
         </ul>
       </article>
 
       <article class="card night" aria-label="Noite 3">
         <h3>🌱 Noite 3 — Reescrevendo Meu Lugar no Mundo</h3>
-        <p>quem eu precisei ser para caber vs. quem eu escolho ser agora. pertencer sem carregar o que não é meu.</p>
+        <p>Quem eu precisei ser para caber vs. Quem eu escolho ser agora. Pertencer sem carregar o que não é meu.</p>
         <ul>
-          <li>carta de compromisso: “a vida que eu quero viver”</li>
-          <li>equilíbrio dar/receber (pertencimento saudável)</li>
-          <li>meditação de integração + próximos passos</li>
+          <li>Carta de compromisso: “A vida que eu quero viver”</li>
+          <li>Equilíbrio dar/receber (Pertencimento saudável)</li>
+          <li>Meditação de integração + próximos passos</li>
         </ul>
       </article>
     </section>
@@ -209,31 +209,37 @@
       <h2 id="porque" style="grid-column:1/-1;margin:0 0 6px">por que participar</h2>
       <div class="card">
         <ul>
-          <li>online, gratuito e direto ao ponto</li>
-          <li>3 encontros ao vivo com práticas reais (nada de teoria solta)</li>
-          <li>materiais para imprimir e aplicar na semana</li>
+          <li>ONLINE, GRATUITO e direto ao ponto</li>
+          <li>3 Encontros ao vivo com práticas reais (nada de teoria solta)</li>
+          <li>Materiais para imprimir e aplicar na semana</li>
         </ul>
       </div>
       <div class="card">
         <ul>
-          <li>clareza emocional e mental para decidir o próximo passo</li>
-          <li>leveza para relações e rotina</li>
-          <li>um começo novo, com consciência</li>
+          <li>Clareza emocional e mental para decidir o próximo passo</li>
+          <li>Leveza para relações e rotina</li>
+          <li>Um começo novo, com consciência</li>
         </ul>
       </div>
     </section>
 
     <section class="card" aria-labelledby="cta2" style="margin-top:22px;text-align:center">
       <h2 id="cta2" style="margin-top:0">garanta sua vaga agora</h2>
-      <p class="sub">as informações e links serão enviados somente dentro do grupo.</p>
-      <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener">💬 entrar no grupo de whatsapp</a>
+      <p class="sub">As informações e links serão enviados somente dentro do grupo.</p>
+      <a class="cta" href="<a class="cta" 
+   href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
+   target="_blank" 
+   rel="noopener">💬 Entrar no grupo de WhatsApp</a>" target="_blank" rel="noopener">💬 entrar no grupo de whatsapp</a>
       <p class="sub" style="margin-top:10px">📅 23, 24 e 25/10 • 🕖 19h • 🎥 YouTube</p>
     </section>
 
     <div class="sticky-bar" aria-hidden="false">
       <div class="sticky-inner">
-        <span>⏳ começa em: <span class="countdown">calculando…</span></span>
-        <a class="cta" href="WHATSAPP_LINK_AQUI" target="_blank" rel="noopener" style="padding:10px 14px;font-weight:700">garantir vaga</a>
+        <span>⏳ Começa em: <span class="countdown">calculando…</span></span>
+        <a class="cta" href="<a class="cta" 
+   href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
+   target="_blank" 
+   rel="noopener">💬 Entrar no grupo de WhatsApp</a>" target="_blank" rel="noopener" style="padding:10px 14px;font-weight:700">garantir vaga</a>
       </div>
     </div>
   </main>
