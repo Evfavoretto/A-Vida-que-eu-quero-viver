@@ -1,8 +1,3 @@
-# A Vida que eu quero viver
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Workshop | A Vida Que Eu Quero Viver</title>
   <meta name="description" content="Workshop gratuito de 3 noites (23, 24 e 25 de outubro, às 19h, ao vivo no YouTube) para soltar pesos do passado, liberar emoções que aprisionam e reescrever a sua história com leveza. Inscreva-se entrando no grupo de WhatsApp.">
   <meta name="theme-color" content="#6D5BD0">
