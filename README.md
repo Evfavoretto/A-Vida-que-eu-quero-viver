@@ -4,18 +4,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Workshop | A Vida Que Eu Quero Viver</title>
   <meta name="description" content="Workshop gratuito de 3 noites (23, 24 e 25 de outubro, às 19h, ao vivo no YouTube) para soltar pesos do passado, liberar emoções que aprisionam e reescrever a sua história com leveza.">
-    <meta name="theme-color" content="#6D5BD0">
+  <meta name="theme-color" content="#6D5BD0">
   <!-- Open Graph -->
   <meta property="og:title" content="Workshop | A Vida Que Eu Quero Viver" />
   <meta property="og:description" content="3 Noites para soltar o passado e escolher leveza. 23–25/10 às 19h, ao vivo no YouTube." />
-   <a class="cta" 
-   href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
-   target="_blank" 
-   rel="noopener">💬 Entrar no grupo de WhatsApp</a>
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=A Vida Que Eu Quero Viver" />
   <meta property="og:url" content="https://seudominio.com/workshop" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2748%27 fill=%27%236D5BD0%27/%3E%3Ctext x=%2750%27 y=%2760%27 font-size=%2750%27 text-anchor=%27middle%27 fill=%27white%27%3E❤%3C/text%3E%3C/svg%3E" />
+
   <style>
     :root{
       --bg:#0f1020;
@@ -105,6 +102,7 @@
       .why{grid-template-columns:1fr}
     }
   </style>
+
   <script>
     // Contagem regressiva até 23/10/2025 19:00 America/Sao_Paulo (UTC-03)
     document.addEventListener('DOMContentLoaded', ()=>{
@@ -123,6 +121,7 @@
       tick(); setInterval(tick, 30000);
     });
   </script>
+
   <!-- JSON-LD de evento para SEO -->
   <script type="application/ld+json">
   {
@@ -139,6 +138,25 @@
     "organizer":{"@type":"Organization","name":"Mentoria O Seu Lugar"}
   }
   </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1284878359977607');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1284878359977607&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
 </head>
 <body>
   <header class="wrap hero" role="banner" aria-label="Cabeçalho do workshop">
@@ -152,10 +170,12 @@
         <span class="chip">🎥 YouTube</span>
         <span class="chip">⏳ Começa em: <span class="countdown" aria-live="polite">calculando…</span></span>
       </div>
-          <a class="cta" 
-        href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
-        target="_blank" 
-        rel="noopener" aria-label="Entrar no grupo de WhatsApp e garantir minha vaga">💬 Entrar no grupo de WhatsApp</a>
+      <a class="cta js-whatsapp"
+         href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
+         target="_blank"
+         rel="noopener"
+         aria-label="Entrar no grupo de WhatsApp e garantir minha vaga"
+         data-track="whatsapp_header">💬 Entrar no grupo de WhatsApp</a>
       <p class="sub" style="margin-top:10px">❗ A confirmação e os links das aulas serão enviados apenas no grupo.</p>
     </div>
     <div class="illus card" role="img" aria-label="Ilustração do workshop">
@@ -232,19 +252,22 @@
     <section class="card" aria-labelledby="cta2" style="margin-top:22px;text-align:center">
       <h2 id="cta2" style="margin-top:0">garanta sua vaga agora</h2>
       <p class="sub">As informações e links serão enviados somente dentro do grupo.</p>
-      <a class="cta" href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
-   target="_blank" 
-   rel="noopener">💬 Entrar no grupo de WhatsApp</a>
+      <a class="cta js-whatsapp"
+         href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
+         target="_blank"
+         rel="noopener"
+         data-track="whatsapp_mid">💬 Entrar no grupo de WhatsApp</a>
       <p class="sub" style="margin-top:10px">📅 23, 24 e 25/10 • 🕖 19h • 🎥 YouTube</p>
     </section>
 
     <div class="sticky-bar" aria-hidden="false">
       <div class="sticky-inner">
         <span>⏳ Começa em: <span class="countdown">calculando…</span></span>
-        <a class="cta"
-   href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" 
-   target="_blank" 
-   rel="noopener">💬 GARANTIR MINHA VAGA</a>
+        <a class="cta js-whatsapp"
+           href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
+           target="_blank"
+           rel="noopener"
+           data-track="whatsapp_sticky">💬 GARANTIR MINHA VAGA</a>
       </div>
     </div>
   </main>
@@ -253,5 +276,31 @@
     <div style="opacity:.9">© <span id="y"></span> Mentoria O Seu Lugar • Todos os direitos reservados</div>
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>
+
+  <!-- RASTREAMENTO DE CLIQUES NO WHATSAPP (Lead) -->
+  <script>
+    // Gatilho de Lead ao clicar nos botões que levam ao WhatsApp
+    // Seleciona qualquer link com classe .js-whatsapp OU cujo href contenha chat.whatsapp.com
+    (function(){
+      function trackLead(e){
+        try{
+          fbq && fbq('track', 'Lead', {
+            content_name: 'WhatsApp Group Join',
+            content_category: 'Workshop A Vida Que Eu Quero Viver',
+            value: 0.00,
+            currency: 'BRL'
+          });
+        }catch(err){}
+      }
+      document.addEventListener('click', function(ev){
+        const a = ev.target.closest('a');
+        if(!a) return;
+        const href = a.getAttribute('href') || '';
+        if (a.classList.contains('js-whatsapp') || href.includes('chat.whatsapp.com')){
+          trackLead();
+        }
+      }, true);
+    })();
+  </script>
 </body>
 </html>
