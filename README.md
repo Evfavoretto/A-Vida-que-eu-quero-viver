@@ -1,3 +1,4 @@
+
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
@@ -28,9 +29,9 @@
       --shadow: 0 8px 22px rgba(17,24,39,.06);
       --radius:16px;
 
-      /* Gradientes azuis para painéis e barra flutuante */
+      /* Gradientes azuis para painéis e rodapé */
       --grad-blue: linear-gradient(90deg,#ecfeff 0%, #f5f3ff 100%);
-      --grad-float: linear-gradient(90deg, rgba(141,129,235,.96) 0%, rgba(109,91,208,.96) 100%);
+      --grad-footer: linear-gradient(90deg, #6D5BD0 0%, #8F83E6 100%);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -133,41 +134,30 @@
     }
     .illus small{display:block; color:#6d5bd0; font-weight:700}
 
-    /* Barra flutuante com countdown + CTA */
-    .float-cta-wrap{
-      position:fixed; left:50%; bottom:18px; transform:translateX(-50%);
-      z-index:1000; width:min(980px, calc(100% - 24px));
-    }
-    .float-cta{
-      display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
-      padding:12px 14px; border-radius:14px;
-      background: var(--grad-float);
-      color:#fff; border:1px solid rgba(255,255,255,.25);
-      box-shadow: 0 18px 40px rgba(109,91,208,.35);
-    }
-    .float-cta .label{font-weight:800; letter-spacing:.02em; display:flex; gap:8px; align-items:center}
-    .float-cta .countdown{font-variant-numeric: tabular-nums; font-weight:900; background:rgba(255,255,255,.18); padding:6px 10px; border-radius:10px}
-    .float-cta .cta{box-shadow:none; border:1px solid rgba(255,255,255,.25)}
-    @media (max-width:700px){
-      .float-cta{justify-content:center}
-    }
-
-    /* Rodapé destacado e centralizado, com letra mais fina */
+    /* Rodapé fixo visualmente (barra) com countdown */
     footer{
       margin-top:64px;
-      background: linear-gradient(90deg, #6D5BD0 0%, #8F83E6 100%);
+      background: var(--grad-footer);
       border-top:1px solid #d9d6fb;
       color:#fff;
     }
     .footer-inner{
-      max-width:1080px; margin:0 auto; padding:28px 24px;
-      display:flex; align-items:center; justify-content:center; text-align:center;
+      max-width:1080px; margin:0 auto; padding:18px 24px;
+      display:flex; align-items:center; justify-content:center; gap:12px;
+      text-align:center;
       font-weight:500; /* mais fino */
       letter-spacing:.01em;
+      flex-wrap:wrap;    /* mesmo visual em desktop e celular */
     }
-    .footer-inner small{opacity:.92; font-weight:500}
+    .footer-sep{opacity:.65}
+    .footer-count{
+      display:inline-flex; gap:8px; align-items:center;
+      font-weight:800;
+      background:rgba(255,255,255,.18);
+      padding:6px 10px; border-radius:10px;
+    }
+    .footer-count .countdown{font-variant-numeric: tabular-nums; font-weight:900}
 
-    h2{font-size:clamp(1.6rem,3.6vw,2.1rem); margin:0 0 6px; font-weight:900}
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
       .nights{grid-template-columns:1fr}
@@ -333,7 +323,7 @@
       </div>
     </section>
 
-    <!-- CTA central (permanece como estava) -->
+    <!-- CTA central -->
     <section class="card" aria-labelledby="cta2" style="margin-top:22px;text-align:center">
       <h2 id="cta2" style="margin-top:0">Garanta sua vaga agora</h2>
       <p class="sub">As informações e links serão enviados somente dentro do grupo.</p>
@@ -345,21 +335,12 @@
     </section>
   </main>
 
-  <!-- Barra flutuante com countdown + CTA -->
-  <div class="float-cta-wrap" role="complementary" aria-label="Chamada rápida de inscrição">
-    <div class="float-cta">
-      <div class="label">⏳ Começa em: <span class="countdown" aria-live="polite">Calculando…</span></div>
-      <a class="cta js-whatsapp"
-         href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
-         target="_blank" rel="noopener"
-         data-track="whatsapp_sticky">💬 Garantir minha vaga</a>
-    </div>
-  </div>
-
-  <!-- Rodapé centralizado com fonte mais fina -->
-  <footer role="contentinfo">
+  <!-- Rodapé com contagem regressiva (único lugar) -->
+  <footer role="contentinfo" aria-label="Barra fixa com contagem regressiva e direitos autorais">
     <div class="footer-inner">
-      © <span id="y"></span> Mentoria O Seu Lugar • Todos os direitos reservados
+      <span class="footer-count">⏳ Começa em: <span class="countdown" aria-live="polite">Calculando…</span></span>
+      <span class="footer-sep">•</span>
+      <span>© <span id="y"></span> Mentoria O Seu Lugar — Todos os direitos reservados</span>
     </div>
   </footer>
 
