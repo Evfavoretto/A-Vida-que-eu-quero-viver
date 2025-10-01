@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
@@ -16,17 +17,21 @@
   <style>
     :root{
       /* Paleta clara e leve */
-      --bg:#f7f7fc;          /* fundo principal */
-      --bg-soft:#ffffff;     /* cartões/áreas suaves */
-      --brand:#6D5BD0;       /* roxo primário */
-      --brand-2:#8F83E6;     /* lavanda */
-      --text:#1f2937;        /* cinza-escuro legível */
-      --muted:#475569;       /* cinza médio */
+      --bg:#f7f7fc;
+      --bg-soft:#ffffff;
+      --brand:#6D5BD0;
+      --brand-2:#8F83E6;
+      --text:#1f2937;
+      --muted:#475569;
       --ok:#16a34a;
       --warn:#b45309;
       --line:#e6e8f0;
       --shadow: 0 8px 22px rgba(17,24,39,.06);
       --radius:16px;
+
+      /* Gradientes azuis para painéis e barra flutuante */
+      --grad-blue: linear-gradient(90deg,#ecfeff 0%, #f5f3ff 100%);
+      --grad-float: linear-gradient(90deg, rgba(141,129,235,.96) 0%, rgba(109,91,208,.96) 100%);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -57,22 +62,16 @@
     /* Sem badge no hero */
     .badge{display:none}
 
-    /* Título GRANDE e chamativo (atualizado) */
+    /* Título GRANDE e chamativo */
     h1{
-      font-size: clamp(3.4rem, 8.5vw, 5.6rem); /* maior */
+      font-size: clamp(3.4rem, 8.5vw, 5.6rem);
       margin:10px 0 14px;
       line-height:1.02;
       font-weight:900;
       letter-spacing:.3px;
       text-align:left;
-
-      /* gradiente mais vivo */
       background: linear-gradient(90deg, #4338ca 0%, #6D5BD0 40%, #8F83E6 80%, #a89cf5 100%);
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-
-      /* brilho suave pra destacar */
+      -webkit-background-clip:text; background-clip:text; color:transparent;
       text-shadow: 0 4px 22px rgba(109,91,208,.25);
     }
 
@@ -106,9 +105,19 @@
     .night ul{margin:10px 0 0 18px}
     .why{grid-template-columns: repeat(2,1fr)}
 
+    /* Painéis com fundo azul (degradê leve) */
+    .panel-blue{
+      background: var(--grad-blue);
+      border:1px solid #e5e7eb;
+      border-radius:20px;
+      padding:18px;
+      box-shadow: 0 8px 24px rgba(17,24,39,.05);
+      margin-top:22px;
+    }
+
     .notice{
       display:flex; align-items:center; gap:10px; color:#0f172a;
-      background:linear-gradient(90deg,#ecfeff,#f5f3ff);
+      background:var(--grad-blue);
       border:1px solid #e5e7eb;
       border-radius:12px; padding:12px 14px; font-weight:600;
     }
@@ -125,9 +134,28 @@
     }
     .illus small{display:block; color:#6d5bd0; font-weight:700}
 
-    /* Rodapé destacado e centralizado */
+    /* Barra flutuante com countdown + CTA */
+    .float-cta-wrap{
+      position:fixed; left:50%; bottom:18px; transform:translateX(-50%);
+      z-index:1000; width:min(980px, calc(100% - 24px));
+    }
+    .float-cta{
+      display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      padding:12px 14px; border-radius:14px;
+      background: var(--grad-float);
+      color:#fff; border:1px solid rgba(255,255,255,.25);
+      box-shadow: 0 18px 40px rgba(109,91,208,.35);
+    }
+    .float-cta .label{font-weight:800; letter-spacing:.02em; display:flex; gap:8px; align-items:center}
+    .float-cta .countdown{font-variant-numeric: tabular-nums; font-weight:900; background:rgba(255,255,255,.18); padding:6px 10px; border-radius:10px}
+    .float-cta .cta{box-shadow:none; border:1px solid rgba(255,255,255,.25)}
+    @media (max-width:700px){
+      .float-cta{justify-content:center}
+    }
+
+    /* Rodapé destacado e centralizado, com letra mais fina */
     footer{
-      margin-top:32px;
+      margin-top:64px;
       background: linear-gradient(90deg, #6D5BD0 0%, #8F83E6 100%);
       border-top:1px solid #d9d6fb;
       color:#fff;
@@ -135,9 +163,10 @@
     .footer-inner{
       max-width:1080px; margin:0 auto; padding:28px 24px;
       display:flex; align-items:center; justify-content:center; text-align:center;
-      font-weight:800; letter-spacing:.02em;
+      font-weight:500; /* mais fino */
+      letter-spacing:.01em;
     }
-    .footer-inner small{opacity:.92; font-weight:600}
+    .footer-inner small{opacity:.92; font-weight:500}
 
     h2{font-size:clamp(1.6rem,3.6vw,2.1rem); margin:0 0 6px; font-weight:900}
     @media (max-width: 900px){
@@ -229,70 +258,83 @@
   </header>
 
   <main class="wrap" role="main">
-    <section class="card" aria-labelledby="convite">
-      <h2 id="convite">Um convite simples: Um novo começo</h2>
-      <p>
-        Se a sua vida parece <em>travada</em> e você sente um peso que não sabe explicar, este encontro é para você.
-        O passado não muda — mas o peso que você carrega dele pode mudar. Em três noites, vamos sair do automático,
-        diminuir o barulho interno e criar um caminho real de leveza.
-      </p>
-      <div class="notice" role="note">
-        📩 Para participar, basta clicar no botão acima (link do WhatsApp será confirmado depois).
-      </div>
-    </section>
-
-    <section class="grid nights" aria-labelledby="noites" style="margin-top:22px">
-      <h2 id="noites" style="grid-column:1/-1;margin:0 0 6px">O que vai rolar em cada noite</h2>
-
-      <article class="card night" aria-label="Noite 1">
-        <h3>🌌 Noite 1 — O barulho invisível da mente</h3>
-        <p>Como pensamentos acelerados e autocobrança nos afastam do essencial. O falso “estar ocupado” que esconde ansiedade.</p>
-        <ul>
-          <li>Identificar ruídos (produtividade-fuga, controle, comparação)</li>
-          <li>Microprática de presença</li>
-          <li>Clareza do essencial (o que realmente importa agora)</li>
-        </ul>
-      </article>
-
-      <article class="card night" aria-label="Noite 2">
-        <h3>🔥 Noite 2 — Emoções que sabotam meus passos</h3>
-        <p>Quando uma emoção vale mais que uma vida inteira: medo, culpa, vergonha e a arte de ressignificar.</p>
-        <ul>
-          <li>Mapa da emoção raiz (psico + neuro)</li>
-          <li>Soltar com método: reconhecer → acolher → ressignificar → ancorar</li>
-          <li>Exercício “da dor ao recurso”</li>
-        </ul>
-      </article>
-
-      <article class="card night" aria-label="Noite 3">
-        <h3>🌱 Noite 3 — Reescrevendo meu lugar no mundo</h3>
-        <p>Quem eu precisei ser para caber vs. quem eu escolho ser agora. Pertencer sem carregar o que não é meu.</p>
-        <ul>
-          <li>Carta de compromisso: “A vida que eu quero viver”</li>
-          <li>Equilíbrio dar/receber (pertencimento saudável)</li>
-          <li>Meditação de integração + próximos passos</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="grid why" aria-labelledby="porque" style="margin-top:22px">
-      <h2 id="porque" style="grid-column:1/-1;margin:0 0 6px">Por que participar</h2>
+    <!-- Painel azul: Convite -->
+    <section class="panel-blue" aria-labelledby="convite">
       <div class="card">
-        <ul>
-          <li>Online, gratuito e direto ao ponto</li>
-          <li>Três encontros ao vivo com práticas reais</li>
-          <li>Materiais para imprimir e aplicar na semana</li>
-        </ul>
-      </div>
-      <div class="card">
-        <ul>
-          <li>Clareza emocional e mental para decidir o próximo passo</li>
-          <li>Leveza para relações e rotina</li>
-          <li>Um começo novo, com consciência</li>
-        </ul>
+        <h2 id="convite">Um convite simples: Um novo começo</h2>
+        <p>
+          Se a sua vida parece <em>travada</em> e você sente um peso que não sabe explicar, este encontro é para você.
+          O passado não muda — mas o peso que você carrega dele pode mudar. Em três noites, vamos sair do automático,
+          diminuir o barulho interno e criar um caminho real de leveza.
+        </p>
+        <div class="notice" role="note">
+          📩 Para participar, basta clicar no botão acima (link do WhatsApp será confirmado depois).
+        </div>
       </div>
     </section>
 
+    <!-- Painel azul: O que vai rolar -->
+    <section class="panel-blue" aria-labelledby="noites">
+      <div class="wrap-in" style="display:block">
+        <h2 id="noites" style="margin:2px 0 12px">O que vai rolar em cada noite</h2>
+        <div class="grid nights">
+          <article class="card night" aria-label="Noite 1">
+            <h3>🌌 Noite 1 — O barulho invisível da mente</h3>
+            <p>Como pensamentos acelerados e autocobrança nos afastam do essencial. O falso “estar ocupado” que esconde ansiedade.</p>
+            <ul>
+              <li>Identificar ruídos (produtividade-fuga, controle, comparação)</li>
+              <li>Microprática de presença</li>
+              <li>Clareza do essencial (o que realmente importa agora)</li>
+            </ul>
+          </article>
+
+          <article class="card night" aria-label="Noite 2">
+            <h3>🔥 Noite 2 — Emoções que sabotam meus passos</h3>
+            <p>Quando uma emoção vale mais que uma vida inteira: medo, culpa, vergonha e a arte de ressignificar.</p>
+            <ul>
+              <li>Mapa da emoção raiz (psico + neuro)</li>
+              <li>Soltar com método: reconhecer → acolher → ressignificar → ancorar</li>
+              <li>Exercício “da dor ao recurso”</li>
+            </ul>
+          </article>
+
+          <article class="card night" aria-label="Noite 3">
+            <h3>🌱 Noite 3 — Reescrevendo meu lugar no mundo</h3>
+            <p>Quem eu precisei ser para caber vs. quem eu escolho ser agora. Pertencer sem carregar o que não é meu.</p>
+            <ul>
+              <li>Carta de compromisso: “A vida que eu quero viver”</li>
+              <li>Equilíbrio dar/receber (pertencimento saudável)</li>
+              <li>Meditação de integração + próximos passos</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Painel azul: Por que participar -->
+    <section class="panel-blue" aria-labelledby="porque">
+      <div class="wrap-in">
+        <h2 id="porque" style="margin:2px 0 12px">Por que participar</h2>
+        <div class="grid why">
+          <div class="card">
+            <ul>
+              <li>Online, gratuito e direto ao ponto</li>
+              <li>Três encontros ao vivo com práticas reais</li>
+              <li>Materiais para imprimir e aplicar na semana</li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul>
+              <li>Clareza emocional e mental para decidir o próximo passo</li>
+              <li>Leveza para relações e rotina</li>
+              <li>Um começo novo, com consciência</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA central (permanece como estava) -->
     <section class="card" aria-labelledby="cta2" style="margin-top:22px;text-align:center">
       <h2 id="cta2" style="margin-top:0">Garanta sua vaga agora</h2>
       <p class="sub">As informações e links serão enviados somente dentro do grupo.</p>
@@ -304,7 +346,18 @@
     </section>
   </main>
 
-  <!-- Rodapé centralizado e destacado -->
+  <!-- Barra flutuante com countdown + CTA -->
+  <div class="float-cta-wrap" role="complementary" aria-label="Chamada rápida de inscrição">
+    <div class="float-cta">
+      <div class="label">⏳ Começa em: <span class="countdown" aria-live="polite">Calculando…</span></div>
+      <a class="cta js-whatsapp"
+         href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
+         target="_blank" rel="noopener"
+         data-track="whatsapp_sticky">💬 Garantir minha vaga</a>
+    </div>
+  </div>
+
+  <!-- Rodapé centralizado com fonte mais fina -->
   <footer role="contentinfo">
     <div class="footer-inner">
       © <span id="y"></span> Mentoria O Seu Lugar • Todos os direitos reservados
