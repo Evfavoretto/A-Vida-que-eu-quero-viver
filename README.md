@@ -25,62 +25,46 @@
       --warn:#FFC86B;
       --shadow: 0 10px 30px rgba(0,0,0,.35);
       --radius:16px;
-      --ribbon-h:56px; /* altura da barra fixa */
+      --card-bg: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.03));
+      --card-border: 1px solid rgba(255,255,255,.08);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 800px at 70% -10%, #222455 0%, transparent 60%) , var(--bg);
+      background:
+        radial-gradient(1200px 800px at 70% -10%, #222455 0%, transparent 60%),
+        var(--bg);
       color:var(--text);
       line-height:1.5;
-      padding-top: var(--ribbon-h); /* compensa a barra fixa */
     }
 
-    /* Remove header/título padrão do GitHub Pages */
+    /* Remover cabeçalho/título do GitHub Pages (força a saída) */
     .site-header, .page-header, header.page-header, .project-name, .project-tagline,
     .Header, .AppHeader, .application-main > header,
     .markdown-body > h1:first-child,
     body > header[role="banner"].site-header,
     body > .page-header { display:none !important; height:0 !important; overflow:hidden !important; }
 
-    /* Barra fixa no topo */
-    .top-ribbon{
-      position:fixed; inset:0 0 auto 0; height:var(--ribbon-h);
-      z-index:1000; display:flex; justify-content:center; gap:12px; align-items:center; flex-wrap:wrap;
-      padding:10px 14px;
-      background:linear-gradient(90deg,var(--brand),var(--brand-2));
-      color:#fff; box-shadow:0 8px 24px rgba(0,0,0,.35);
-      font-weight:900; letter-spacing:.02em;
-    }
-    .top-ribbon .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.22);
-      padding:8px 12px; border-radius:999px;
-      font-size:clamp(.9rem,2.4vw,1rem);
-      white-space:nowrap;
-    }
-
     .wrap{max-width:1080px;margin:0 auto;padding:24px}
     .hero{
       display:grid; gap:24px; align-items:center;
       grid-template-columns: 1.2fr .8fr;
-      padding: clamp(18px,4.6vw,48px) 0;
+      padding: clamp(22px,5vw,56px) 0;
     }
 
-    /* 👇 escondi o badge do hero como você pediu */
+    /* Badge do hero removido */
     .badge{display:none}
 
-    /* H1 bem chamativo */
+    /* Título bem destacado */
     h1{
-      font-size: clamp(2.6rem, 7vw, 4.2rem);
-      margin:6px 0 10px;
+      font-size: clamp(2.8rem, 7.2vw, 4.6rem);
+      margin:6px 0 12px;
       line-height:1.05;
       font-weight:900;
       letter-spacing:.2px;
-      background:linear-gradient(90deg,#fff 0%, #cfc9ff 60%, #9a8eff 100%);
+      background:linear-gradient(90deg,#ffffff 0%, #dcd6ff 55%, #b3a6ff 100%);
       -webkit-background-clip:text; background-clip:text; color:transparent;
       text-shadow: 0 2px 18px rgba(157,140,255,.18);
     }
@@ -91,46 +75,68 @@
       background:linear-gradient(90deg,var(--brand-2),var(--brand));
       color:#fff; font-weight:800; letter-spacing:.2px;
       padding:16px 22px; border-radius:12px; text-decoration:none; box-shadow:var(--shadow);
-      transition: transform .08s ease;
+      transition: transform .08s ease, filter .15s ease;
     }
-    .cta:hover{transform: translateY(-1px)}
+    .cta:hover{transform: translateY(-1px); filter:brightness(1.06)}
+    .cta:focus{outline:3px solid #a79cff; outline-offset:2px}
+
     .meta{display:flex; gap:14px; flex-wrap:wrap; margin:10px 0 24px}
-    .chip{background:rgba(255,255,255,.06); color:var(--muted); border:1px solid rgba(255,255,255,.08); padding:8px 12px; border-radius:999px; font-size:.92rem}
+    .chip{background:rgba(255,255,255,.06); color:var(--muted); border:1px solid rgba(255,255,255,.1); padding:8px 12px; border-radius:999px; font-size:.92rem}
+
     .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.08);
+      background:var(--card-bg);
+      border:var(--card-border);
       border-radius: var(--radius);
       padding:24px; box-shadow:var(--shadow)
     }
+
     .grid{display:grid; gap:18px}
     .nights{grid-template-columns: repeat(3,1fr)}
     .night h3{margin:0 0 8px}
     .night ul{margin:10px 0 0 18px}
     .why{grid-template-columns: repeat(2,1fr)}
+
     .notice{
-      display:flex; align-items:center; gap:10px; color:#111; background:linear-gradient(90deg,#D1F7EC,#F6F0FF);
+      display:flex; align-items:center; gap:10px; color:#0e1222;
+      background:linear-gradient(90deg,#D1F7EC,#F6F0FF);
       border-radius:12px; padding:12px 14px; font-weight:600;
     }
-    .notice a{color:#0b7; font-weight:800; text-decoration:underline}
-    .sticky-bar{ position:sticky; bottom:12px; z-index:100; display:flex; justify-content:center; }
-    .sticky-inner{
-      backdrop-filter: blur(10px);
-      background: rgba(21, 23, 53, .75);
-      border:1px solid rgba(255,255,255,.1);
-      padding:10px; border-radius:14px; box-shadow:var(--shadow);
-      display:flex; gap:12px; align-items:center;
-    }
-    .countdown{font-variant-numeric: tabular-nums; color:var(--warn); font-weight:700}
-    footer{color:var(--muted); font-size:.9rem; padding:40px 0}
+    .notice a{color:#007a6f; font-weight:800; text-decoration:underline}
+
+    /* Ilustração: mesma base de cor das cards para evitar “falhas de cor” */
     .illus{
       aspect-ratio: 4/3; border-radius: var(--radius);
-      background: radial-gradient(500px 400px at 30% 20%, rgba(111,92,210,.35), transparent 60%),
-                  linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.08);
+      background:
+        radial-gradient(500px 400px at 30% 20%, rgba(111,92,210,.35), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:var(--card-border);
       display:flex; align-items:center; justify-content:center;
-      color:#cfc9ff; font-weight:700; letter-spacing:.5px;
+      color:#e4dfff; font-weight:800; letter-spacing:.5px;
+      text-align:center;
     }
-    .illus small{display:block; color:#bdb7ee; font-weight:600}
+    .illus small{display:block; color:#c9c2ff; font-weight:700}
+
+    /* Sticky CTA removido para evitar conflito de cor/contraste */
+    /* Rodapé destacado e centralizado */
+    footer{
+      margin-top:32px;
+      background:linear-gradient(90deg, #1b1e3e 0%, #272b57 60%, #2f2b66 100%);
+      border-top:1px solid rgba(255,255,255,.12);
+    }
+    .footer-inner{
+      max-width:1080px; margin:0 auto; padding:26px 24px;
+      display:flex; align-items:center; justify-content:center; text-align:center;
+      color:#fff; font-weight:800; letter-spacing:.02em;
+    }
+    .footer-inner small{opacity:.9; font-weight:600}
+
+    /* Títulos das seções com iniciais maiúsculas */
+    h2{font-size:clamp(1.6rem,3.6vw,2.1rem); margin:0 0 6px; font-weight:900}
+    #convite::first-letter,
+    #noites::first-letter,
+    #porque::first-letter,
+    #cta2::first-letter{ text-transform:uppercase; }
+
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
       .nights{grid-template-columns:1fr}
@@ -146,7 +152,7 @@
         const target = new Date('2025-10-23T19:00:00-03:00').getTime();
         const now = Date.now();
         let ms = target - now;
-        if(ms < 0){ out.forEach(el=>el.textContent="começa hoje • 19h"); return; }
+        if(ms < 0){ out.forEach(el=>el.textContent="Começa hoje • 19h"); return; } // Maiúscula
         const d = Math.floor(ms/86400000); ms-=d*86400000;
         const h = Math.floor(ms/3600000); ms-=h*3600000;
         const m = Math.floor(ms/60000);
@@ -169,7 +175,7 @@
     "eventStatus":"https://schema.org/EventScheduled",
     "location":{"@type":"VirtualLocation","url":"https://youtube.com/"},
     "image":"https://via.placeholder.com/1200x630.png?text=A+Vida+Que+Eu+Quero+Viver",
-    "description":"3 Noites para soltar pesos do passado, liberar emoções que aprisionam e reescrever a história com leveza. Inscreva-se entrando no grupo de WhatsApp.",
+    "description":"3 noites para soltar pesos do passado, liberar emoções que aprisionam e reescrever a história com leveza. Inscreva-se entrando no grupo de WhatsApp.",
     "organizer":{"@type":"Organization","name":"Mentoria O Seu Lugar"}
   }
   </script>
@@ -184,73 +190,63 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1284878359977607');
-  fbq('track', 'PageView');
+  fbq('init', '1284878359977607'); fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1284878359977607&ev=PageView&noscript=1"
   /></noscript>
-  <!-- End Meta Pixel Code -->
 </head>
 
 <body>
-  <!-- Barra fixa -->
-  <div class="top-ribbon" role="note" aria-label="Informação principal do evento">
-    <span class="pill">🎉 Workshop gratuito</span>
-    <span class="pill">🔴 Ao vivo no YouTube</span>
-    <span class="pill">📅 23–25/10 • 🕖 19h</span>
-  </div>
-
-  <header class="wrap hero" role="banner" aria-label="Cabeçalho do workshop">
+  <header class="wrap hero" role="banner" aria-label="Cabeçalho do Workshop">
     <div>
-      <!-- badge removido -->
       <h1>A Vida Que Eu Quero Viver</h1>
-      <p class="sub">3 Noites para soltar os barulhos da mente, liberar emoções que aprisionam e reescrever sua história com leveza.</p>
-      <div class="meta" aria-label="Informações rápidas">
+      <p class="sub">Três Noites para soltar os barulhos da mente, liberar emoções que aprisionam e reescrever sua história com leveza.</p>
+      <div class="meta" aria-label="Informações Rápidas">
         <span class="chip">📅 23, 24 e 25 de outubro</span>
-        <span class="chip">🕖 19h (ao vivo)</span>
+        <span class="chip">🕖 19h (Ao Vivo)</span>
         <span class="chip">🎥 YouTube</span>
-        <span class="chip">⏳ Começa em: <span class="countdown" aria-live="polite">calculando…</span></span>
+        <span class="chip">⏳ Começa em: <span class="countdown" aria-live="polite">Calculando…</span></span>
       </div>
       <a class="cta js-whatsapp"
          href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
-         target="_blank"
-         rel="noopener"
+         target="_blank" rel="noopener"
          aria-label="Entrar no grupo de WhatsApp e garantir minha vaga"
-         data-track="whatsapp_header">💬 Entrar no grupo de WhatsApp</a>
-      <p class="sub" style="margin-top:10px">❗ A confirmação e os links das aulas serão enviados apenas no grupo.</p>
+         data-track="whatsapp_header">💬 Entrar no Grupo de WhatsApp</a>
+      <p class="sub" style="margin-top:10px">❗ A Confirmação e os links das aulas serão enviados apenas no grupo.</p>
     </div>
-    <div class="illus card" role="img" aria-label="Ilustração do workshop">
+
+    <div class="illus card" role="img" aria-label="Ilustração do Workshop">
       <div>
         WORKSHOP • 3 NOITES
-        <small>Consciência • Liberação • Novo começo</small>
+        <small>Consciência • Liberação • Um Novo Começo</small>
       </div>
     </div>
   </header>
 
   <main class="wrap" role="main">
     <section class="card" aria-labelledby="convite">
-      <h2 id="convite">Um convite simples: Um novo começo</h2>
+      <h2 id="convite">Um Convite Simples: Um Novo Começo</h2>
       <p>
-        Se a sua vida parece <em>travada</em> e você sente um peso que não sabe explicar, este encontro é para você.
-        O passado não muda — mas o peso que você carrega dele pode mudar. Em três noites, vamos sair do automático,
+        Se a sua vida parece <em>Travada</em> e você sente um peso que não sabe explicar, este encontro é para você.
+        O Passado não muda — mas o peso que você carrega dele pode mudar. Em Três Noites, vamos sair do automático,
         diminuir o barulho interno e criar um caminho real de leveza.
       </p>
       <div class="notice" role="note">
-        📩 Para participar, basta clicar no botão ou <a href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" target="_blank" rel="noopener" class="link-what">entrar no grupo de WhatsApp</a>.
+        📩 Para Participar, basta clicar no botão acima (link do WhatsApp será confirmado depois).
       </div>
     </section>
 
     <section class="grid nights" aria-labelledby="noites" style="margin-top:22px">
-      <h2 id="noites" style="grid-column:1/-1;margin:0 0 6px">o que vai rolar em cada noite</h2>
+      <h2 id="noites" style="grid-column:1/-1;margin:0 0 6px">O Que Vai Rolar em Cada Noite</h2>
 
       <article class="card night" aria-label="Noite 1">
         <h3>🌌 Noite 1 — O Barulho Invisível da Mente</h3>
         <p>Como pensamentos acelerados e autocobrança nos afastam do essencial. O falso “estar ocupado” que esconde ansiedade.</p>
         <ul>
           <li>Identificar ruídos (produtividade-fuga, controle, comparação)</li>
-          <li>Microprática de presença:</li>
-          <li>Clareza do essencial (O que realmente importa agora)</li>
+          <li>Microprática de Presença</li>
+          <li>Clareza do Essencial (O que realmente importa agora)</li>
         </ul>
       </article>
 
@@ -258,29 +254,29 @@
         <h3>🔥 Noite 2 — Emoções que Sabotam Meus Passos</h3>
         <p>Quando uma emoção vale mais que uma vida inteira: Medo, Culpa, Vergonha e a arte de ressignificar.</p>
         <ul>
-          <li>Mapa da emoção raiz (psico + neuro)</li>
-          <li>Soltar com método: reconhecer → acolher → ressignificar → ancorar</li>
-          <li>Exercício “da dor ao recurso”</li>
+          <li>Mapa da Emoção Raiz (Psico + Neuro)</li>
+          <li>Soltar com Método: reconhecer → acolher → ressignificar → ancorar</li>
+          <li>Exercício “Da Dor ao Recurso”</li>
         </ul>
       </article>
 
       <article class="card night" aria-label="Noite 3">
         <h3>🌱 Noite 3 — Reescrevendo Meu Lugar no Mundo</h3>
-        <p>Quem eu precisei ser para caber vs. Quem eu escolho ser agora. Pertencer sem carregar o que não é meu.</p>
+        <p>Quem eu precisei ser para caber vs. quem eu escolho ser agora. Pertencer sem carregar o que não é meu.</p>
         <ul>
-          <li>Carta de compromisso: “A vida que eu quero viver”</li>
-          <li>Equilíbrio dar/receber (Pertencimento saudável)</li>
-          <li>Meditação de integração + próximos passos</li>
+          <li>Carta de Compromisso: “A Vida Que Eu Quero Viver”</li>
+          <li>Equilíbrio Dar/Receber (Pertencimento saudável)</li>
+          <li>Meditação de Integração + Próximos Passos</li>
         </ul>
       </article>
     </section>
 
     <section class="grid why" aria-labelledby="porque" style="margin-top:22px">
-      <h2 id="porque" style="grid-column:1/-1;margin:0 0 6px">por que participar</h2>
+      <h2 id="porque" style="grid-column:1/-1;margin:0 0 6px">Por Que Participar</h2>
       <div class="card">
         <ul>
-          <li>ONLINE, GRATUITO e direto ao ponto</li>
-          <li>3 Encontros ao vivo com práticas reais (nada de teoria solta)</li>
+          <li>Online, Gratuito e direto ao ponto</li>
+          <li>Três encontros ao vivo com práticas reais</li>
           <li>Materiais para imprimir e aplicar na semana</li>
         </ul>
       </div>
@@ -294,32 +290,24 @@
     </section>
 
     <section class="card" aria-labelledby="cta2" style="margin-top:22px;text-align:center">
-      <h2 id="cta2" style="margin-top:0">garanta sua vaga agora</h2>
-      <p class="sub">As informações e links serão enviados somente dentro do grupo.</p>
+      <h2 id="cta2" style="margin-top:0">Garanta Sua Vaga Agora</h2>
+      <p class="sub">As Informações e links serão enviados somente dentro do grupo.</p>
       <a class="cta js-whatsapp"
          href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
-         target="_blank"
-         rel="noopener"
-         data-track="whatsapp_mid">💬 Entrar no grupo de WhatsApp</a>
+         target="_blank" rel="noopener"
+         data-track="whatsapp_mid">💬 Entrar no Grupo de WhatsApp</a>
       <p class="sub" style="margin-top:10px">📅 23, 24 e 25/10 • 🕖 19h • 🎥 YouTube</p>
     </section>
-
-    <div class="sticky-bar" aria-hidden="false">
-      <div class="sticky-inner">
-        <span>⏳ Começa em: <span class="countdown">calculando…</span></span>
-        <a class="cta js-whatsapp"
-           href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
-           target="_blank"
-           rel="noopener"
-           data-track="whatsapp_sticky">💬 GARANTIR MINHA VAGA</a>
-      </div>
-    </div>
   </main>
 
-  <footer class="wrap" role="contentinfo">
-    <div style="opacity:.9">© <span id="y"></span> Mentoria O Seu Lugar • Todos os direitos reservados</div>
-    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <!-- Rodapé único destacado -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      © <span id="y"></span> Mentoria O Seu Lugar • Todos os Direitos Reservados
+    </div>
   </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 
   <!-- RASTREAMENTO DE CLIQUES NO WHATSAPP (Lead) -->
   <script>
