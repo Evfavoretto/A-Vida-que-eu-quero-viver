@@ -380,8 +380,7 @@
   <!-- Rodapé com contagem regressiva (principal) -->
   <footer role="contentinfo" aria-label="Barra fixa com contagem regressiva e direitos autorais">
     <div class="footer-inner">
-      <span class="footer-count">⏳ Começa em: <span class="countdown" aria-live="polite">Calculando…</span></span>
-      <span class="footer-sep">•</span>
+      
       <span>© <span id="y"></span> Mentoria O Seu Lugar — Todos os direitos reservados</span>
     </div>
   </footer>
