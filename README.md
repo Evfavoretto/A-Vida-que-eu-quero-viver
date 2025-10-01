@@ -9,43 +9,43 @@
   <meta property="og:title" content="Workshop | A Vida Que Eu Quero Viver" />
   <meta property="og:description" content="3 Noites para soltar o passado e escolher leveza. 23–25/10 às 19h, ao vivo no YouTube." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=A Vida Que Eu Quero Viver" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=A+Vida+Que+Eu+Quero+Viver" />
   <meta property="og:url" content="https://seudominio.com/workshop" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2748%27 fill=%27%236D5BD0%27/%3E%3Ctext x=%2750%27 y=%2760%27 font-size=%2750%27 text-anchor=%27middle%27 fill=%27white%27%3E❤%3C/text%3E%3C/svg%3E" />
 
   <style>
     :root{
-      --bg:#0f1020;
-      --bg-soft:#151735;
-      --brand:#6D5BD0;
-      --brand-2:#8F83E6;
-      --text:#E9E9F3;
-      --muted:#BFC2D9;
-      --ok:#27C498;
-      --warn:#FFC86B;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      /* Paleta clara e leve */
+      --bg:#f7f7fc;          /* fundo principal */
+      --bg-soft:#ffffff;     /* cartões/áreas suaves */
+      --brand:#6D5BD0;       /* roxo primário */
+      --brand-2:#8F83E6;     /* lavanda */
+      --text:#1f2937;        /* cinza-escuro legível */
+      --muted:#475569;       /* cinza médio */
+      --ok:#16a34a;
+      --warn:#b45309;
+      --line:#e6e8f0;
+      --shadow: 0 8px 22px rgba(17,24,39,.06);
       --radius:16px;
-      --card-bg: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.03));
-      --card-border: 1px solid rgba(255,255,255,.08);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
-      background:
-        radial-gradient(1200px 800px at 70% -10%, #222455 0%, transparent 60%),
-        var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
       color:var(--text);
-      line-height:1.5;
+      line-height:1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Remover cabeçalho/título do GitHub Pages (força a saída) */
+    /* Força remover header/título do GitHub Pages */
     .site-header, .page-header, header.page-header, .project-name, .project-tagline,
-    .Header, .AppHeader, .application-main > header,
-    .markdown-body > h1:first-child,
-    body > header[role="banner"].site-header,
-    body > .page-header { display:none !important; height:0 !important; overflow:hidden !important; }
+    .Header, .AppHeader, .application-main > header, .markdown-body > h1:first-child,
+    body > header[role="banner"].site-header, body > .page-header {
+      display:none !important; height:0 !important; overflow:hidden !important;
+    }
 
     .wrap{max-width:1080px;margin:0 auto;padding:24px}
     .hero{
@@ -54,22 +54,26 @@
       padding: clamp(22px,5vw,56px) 0;
     }
 
-    /* Badge do hero removido */
+    /* Sem badge no hero */
     .badge{display:none}
 
-    /* Título bem destacado */
+    /* Título grande, leve e chamativo */
     h1{
-      font-size: clamp(2.8rem, 7.2vw, 4.6rem);
-      margin:6px 0 12px;
-      line-height:1.05;
-      font-weight:900;
-      letter-spacing:.2px;
-      background:linear-gradient(90deg,#ffffff 0%, #dcd6ff 55%, #b3a6ff 100%);
+      font-size: clamp(2.8rem, 7.2vw, 4.8rem);
+      margin:6px 0 10px; line-height:1.05; font-weight:900; letter-spacing:.2px;
+      background: linear-gradient(90deg, #4338ca 0%, #7c6ee6 55%, #a89cf5 100%);
       -webkit-background-clip:text; background-clip:text; color:transparent;
-      text-shadow: 0 2px 18px rgba(157,140,255,.18);
+      text-shadow: 0 2px 16px rgba(124,110,230,.18);
+    }
+    .sub{color:var(--muted); font-size: clamp(1rem, 2.2vw, 1.15rem); margin-bottom:18px}
+
+    .meta{display:flex; gap:12px; flex-wrap:wrap; margin:10px 0 24px}
+    .chip{
+      background:#fff; color:var(--muted);
+      border:1px solid var(--line); padding:8px 12px;
+      border-radius:999px; font-size:.92rem; box-shadow:var(--shadow)
     }
 
-    .sub{color:var(--muted); font-size: clamp(1rem, 2.2vw, 1.15rem); margin-bottom:18px}
     .cta{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
       background:linear-gradient(90deg,var(--brand-2),var(--brand));
@@ -77,17 +81,12 @@
       padding:16px 22px; border-radius:12px; text-decoration:none; box-shadow:var(--shadow);
       transition: transform .08s ease, filter .15s ease;
     }
-    .cta:hover{transform: translateY(-1px); filter:brightness(1.06)}
-    .cta:focus{outline:3px solid #a79cff; outline-offset:2px}
-
-    .meta{display:flex; gap:14px; flex-wrap:wrap; margin:10px 0 24px}
-    .chip{background:rgba(255,255,255,.06); color:var(--muted); border:1px solid rgba(255,255,255,.1); padding:8px 12px; border-radius:999px; font-size:.92rem}
+    .cta:hover{transform: translateY(-1px); filter:brightness(1.05)}
+    .cta:focus{outline:3px solid #c7befa; outline-offset:2px}
 
     .card{
-      background:var(--card-bg);
-      border:var(--card-border);
-      border-radius: var(--radius);
-      padding:24px; box-shadow:var(--shadow)
+      background:var(--bg-soft); border:1px solid var(--line);
+      border-radius: var(--radius); padding:24px; box-shadow:var(--shadow)
     }
 
     .grid{display:grid; gap:18px}
@@ -97,46 +96,39 @@
     .why{grid-template-columns: repeat(2,1fr)}
 
     .notice{
-      display:flex; align-items:center; gap:10px; color:#0e1222;
-      background:linear-gradient(90deg,#D1F7EC,#F6F0FF);
+      display:flex; align-items:center; gap:10px; color:#0f172a;
+      background:linear-gradient(90deg,#ecfeff,#f5f3ff);
+      border:1px solid #e5e7eb;
       border-radius:12px; padding:12px 14px; font-weight:600;
     }
-    .notice a{color:#007a6f; font-weight:800; text-decoration:underline}
+    .notice a{color:#0b7; font-weight:800; text-decoration:underline}
 
-    /* Ilustração: mesma base de cor das cards para evitar “falhas de cor” */
     .illus{
       aspect-ratio: 4/3; border-radius: var(--radius);
       background:
-        radial-gradient(500px 400px at 30% 20%, rgba(111,92,210,.35), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-      border:var(--card-border);
+        radial-gradient(500px 400px at 30% 20%, rgba(109,91,208,.15), transparent 65%),
+        linear-gradient(180deg, #ffffff, #fafaff);
+      border:1px solid var(--line);
       display:flex; align-items:center; justify-content:center;
-      color:#e4dfff; font-weight:800; letter-spacing:.5px;
-      text-align:center;
+      color:#5b5bd6; font-weight:800; letter-spacing:.5px; text-align:center;
     }
-    .illus small{display:block; color:#c9c2ff; font-weight:700}
+    .illus small{display:block; color:#6d5bd0; font-weight:700}
 
-    /* Sticky CTA removido para evitar conflito de cor/contraste */
     /* Rodapé destacado e centralizado */
     footer{
       margin-top:32px;
-      background:linear-gradient(90deg, #1b1e3e 0%, #272b57 60%, #2f2b66 100%);
-      border-top:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(90deg, #6D5BD0 0%, #8F83E6 100%);
+      border-top:1px solid #d9d6fb;
+      color:#fff;
     }
     .footer-inner{
-      max-width:1080px; margin:0 auto; padding:26px 24px;
+      max-width:1080px; margin:0 auto; padding:28px 24px;
       display:flex; align-items:center; justify-content:center; text-align:center;
-      color:#fff; font-weight:800; letter-spacing:.02em;
+      font-weight:800; letter-spacing:.02em;
     }
-    .footer-inner small{opacity:.9; font-weight:600}
+    .footer-inner small{opacity:.92; font-weight:600}
 
-    /* Títulos das seções com iniciais maiúsculas */
     h2{font-size:clamp(1.6rem,3.6vw,2.1rem); margin:0 0 6px; font-weight:900}
-    #convite::first-letter,
-    #noites::first-letter,
-    #porque::first-letter,
-    #cta2::first-letter{ text-transform:uppercase; }
-
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
       .nights{grid-template-columns:1fr}
@@ -152,7 +144,7 @@
         const target = new Date('2025-10-23T19:00:00-03:00').getTime();
         const now = Date.now();
         let ms = target - now;
-        if(ms < 0){ out.forEach(el=>el.textContent="Começa hoje • 19h"); return; } // Maiúscula
+        if(ms < 0){ out.forEach(el=>el.textContent="Começa hoje • 19h"); return; }
         const d = Math.floor(ms/86400000); ms-=d*86400000;
         const h = Math.floor(ms/3600000); ms-=h*3600000;
         const m = Math.floor(ms/60000);
@@ -190,7 +182,8 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1284878359977607'); fbq('track', 'PageView');
+  fbq('init', '1284878359977607');
+  fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1284878359977607&ev=PageView&noscript=1"
@@ -201,10 +194,10 @@
   <header class="wrap hero" role="banner" aria-label="Cabeçalho do Workshop">
     <div>
       <h1>A Vida Que Eu Quero Viver</h1>
-      <p class="sub">Três Noites para soltar os barulhos da mente, liberar emoções que aprisionam e reescrever sua história com leveza.</p>
-      <div class="meta" aria-label="Informações Rápidas">
+      <p class="sub">Três noites para soltar os barulhos da mente, liberar emoções que aprisionam e reescrever sua história com leveza.</p>
+      <div class="meta" aria-label="Informações rápidas">
         <span class="chip">📅 23, 24 e 25 de outubro</span>
-        <span class="chip">🕖 19h (Ao Vivo)</span>
+        <span class="chip">🕖 19h (ao vivo)</span>
         <span class="chip">🎥 YouTube</span>
         <span class="chip">⏳ Começa em: <span class="countdown" aria-live="polite">Calculando…</span></span>
       </div>
@@ -212,70 +205,70 @@
          href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
          target="_blank" rel="noopener"
          aria-label="Entrar no grupo de WhatsApp e garantir minha vaga"
-         data-track="whatsapp_header">💬 Entrar no Grupo de WhatsApp</a>
-      <p class="sub" style="margin-top:10px">❗ A Confirmação e os links das aulas serão enviados apenas no grupo.</p>
+         data-track="whatsapp_header">💬 Entrar no grupo de WhatsApp</a>
+      <p class="sub" style="margin-top:10px">❗ A confirmação e os links das aulas serão enviados apenas no grupo.</p>
     </div>
 
     <div class="illus card" role="img" aria-label="Ilustração do Workshop">
       <div>
         WORKSHOP • 3 NOITES
-        <small>Consciência • Liberação • Um Novo Começo</small>
+        <small>Consciência • Liberação • Um novo começo</small>
       </div>
     </div>
   </header>
 
   <main class="wrap" role="main">
     <section class="card" aria-labelledby="convite">
-      <h2 id="convite">Um Convite Simples: Um Novo Começo</h2>
+      <h2 id="convite">Um convite simples: Um novo começo</h2>
       <p>
-        Se a sua vida parece <em>Travada</em> e você sente um peso que não sabe explicar, este encontro é para você.
-        O Passado não muda — mas o peso que você carrega dele pode mudar. Em Três Noites, vamos sair do automático,
+        Se a sua vida parece <em>travada</em> e você sente um peso que não sabe explicar, este encontro é para você.
+        O passado não muda — mas o peso que você carrega dele pode mudar. Em três noites, vamos sair do automático,
         diminuir o barulho interno e criar um caminho real de leveza.
       </p>
       <div class="notice" role="note">
-        📩 Para Participar, basta clicar no botão acima (link do WhatsApp será confirmado depois).
+        📩 Para participar, basta clicar no botão acima (link do WhatsApp será confirmado depois).
       </div>
     </section>
 
     <section class="grid nights" aria-labelledby="noites" style="margin-top:22px">
-      <h2 id="noites" style="grid-column:1/-1;margin:0 0 6px">O Que Vai Rolar em Cada Noite</h2>
+      <h2 id="noites" style="grid-column:1/-1;margin:0 0 6px">O que vai rolar em cada noite</h2>
 
       <article class="card night" aria-label="Noite 1">
-        <h3>🌌 Noite 1 — O Barulho Invisível da Mente</h3>
+        <h3>🌌 Noite 1 — O barulho invisível da mente</h3>
         <p>Como pensamentos acelerados e autocobrança nos afastam do essencial. O falso “estar ocupado” que esconde ansiedade.</p>
         <ul>
           <li>Identificar ruídos (produtividade-fuga, controle, comparação)</li>
-          <li>Microprática de Presença</li>
-          <li>Clareza do Essencial (O que realmente importa agora)</li>
+          <li>Microprática de presença</li>
+          <li>Clareza do essencial (o que realmente importa agora)</li>
         </ul>
       </article>
 
       <article class="card night" aria-label="Noite 2">
-        <h3>🔥 Noite 2 — Emoções que Sabotam Meus Passos</h3>
-        <p>Quando uma emoção vale mais que uma vida inteira: Medo, Culpa, Vergonha e a arte de ressignificar.</p>
+        <h3>🔥 Noite 2 — Emoções que sabotam meus passos</h3>
+        <p>Quando uma emoção vale mais que uma vida inteira: medo, culpa, vergonha e a arte de ressignificar.</p>
         <ul>
-          <li>Mapa da Emoção Raiz (Psico + Neuro)</li>
-          <li>Soltar com Método: reconhecer → acolher → ressignificar → ancorar</li>
-          <li>Exercício “Da Dor ao Recurso”</li>
+          <li>Mapa da emoção raiz (psico + neuro)</li>
+          <li>Soltar com método: reconhecer → acolher → ressignificar → ancorar</li>
+          <li>Exercício “da dor ao recurso”</li>
         </ul>
       </article>
 
       <article class="card night" aria-label="Noite 3">
-        <h3>🌱 Noite 3 — Reescrevendo Meu Lugar no Mundo</h3>
+        <h3>🌱 Noite 3 — Reescrevendo meu lugar no mundo</h3>
         <p>Quem eu precisei ser para caber vs. quem eu escolho ser agora. Pertencer sem carregar o que não é meu.</p>
         <ul>
-          <li>Carta de Compromisso: “A Vida Que Eu Quero Viver”</li>
-          <li>Equilíbrio Dar/Receber (Pertencimento saudável)</li>
-          <li>Meditação de Integração + Próximos Passos</li>
+          <li>Carta de compromisso: “A vida que eu quero viver”</li>
+          <li>Equilíbrio dar/receber (pertencimento saudável)</li>
+          <li>Meditação de integração + próximos passos</li>
         </ul>
       </article>
     </section>
 
     <section class="grid why" aria-labelledby="porque" style="margin-top:22px">
-      <h2 id="porque" style="grid-column:1/-1;margin:0 0 6px">Por Que Participar</h2>
+      <h2 id="porque" style="grid-column:1/-1;margin:0 0 6px">Por que participar</h2>
       <div class="card">
         <ul>
-          <li>Online, Gratuito e direto ao ponto</li>
+          <li>Online, gratuito e direto ao ponto</li>
           <li>Três encontros ao vivo com práticas reais</li>
           <li>Materiais para imprimir e aplicar na semana</li>
         </ul>
@@ -290,26 +283,26 @@
     </section>
 
     <section class="card" aria-labelledby="cta2" style="margin-top:22px;text-align:center">
-      <h2 id="cta2" style="margin-top:0">Garanta Sua Vaga Agora</h2>
-      <p class="sub">As Informações e links serão enviados somente dentro do grupo.</p>
+      <h2 id="cta2" style="margin-top:0">Garanta sua vaga agora</h2>
+      <p class="sub">As informações e links serão enviados somente dentro do grupo.</p>
       <a class="cta js-whatsapp"
          href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
          target="_blank" rel="noopener"
-         data-track="whatsapp_mid">💬 Entrar no Grupo de WhatsApp</a>
+         data-track="whatsapp_mid">💬 Entrar no grupo de WhatsApp</a>
       <p class="sub" style="margin-top:10px">📅 23, 24 e 25/10 • 🕖 19h • 🎥 YouTube</p>
     </section>
   </main>
 
-  <!-- Rodapé único destacado -->
+  <!-- Rodapé centralizado e destacado -->
   <footer role="contentinfo">
     <div class="footer-inner">
-      © <span id="y"></span> Mentoria O Seu Lugar • Todos os Direitos Reservados
+      © <span id="y"></span> Mentoria O Seu Lugar • Todos os direitos reservados
     </div>
   </footer>
 
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 
-  <!-- RASTREAMENTO DE CLIQUES NO WHATSAPP (Lead) -->
+  <!-- Rastreamento de cliques no WhatsApp -->
   <script>
     (function(){
       function trackLead(){
