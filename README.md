@@ -17,7 +17,7 @@
     :root{
       --bg:#0f1020;
       --bg-soft:#151735;
-      --brand:#6D5BD0;      /* lavanda/roxo */
+      --brand:#6D5BD0;
       --brand-2:#8F83E6;
       --text:#E9E9F3;
       --muted:#BFC2D9;
@@ -35,16 +35,43 @@
       color:var(--text);
       line-height:1.5;
     }
+
+    /* 🔧 FORÇAR a remoção do cabeçalho/título padrão do GitHub Pages */
+    .site-header, .page-header, header.page-header, .project-name, .project-tagline,
+    .Header, .AppHeader, .application-main > header,
+    .markdown-body > h1:first-child,                        /* alguns temas empurram um H1 azul */
+    body > header[role="banner"].site-header,               /* tema padrão */
+    body > .page-header                                    /* fallback */
+    { display:none !important; height:0 !important; overflow:hidden !important; }
+
+    /* Faixa fixa no topo (reforça Workshop gratuito • ao vivo) */
+    .top-ribbon{
+      position:sticky; top:0; z-index:1000;
+      display:flex; justify-content:center; gap:12px; align-items:center; flex-wrap:wrap;
+      padding:10px 14px;
+      background:linear-gradient(90deg,var(--brand),var(--brand-2));
+      color:#fff; box-shadow:0 8px 24px rgba(0,0,0,.35);
+      font-weight:900; letter-spacing:.02em;
+    }
+    .top-ribbon .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.22);
+      padding:8px 12px; border-radius:999px;
+      font-size:clamp(.9rem,2.4vw,1rem);
+      white-space:nowrap;
+    }
+
     .wrap{max-width:1080px;margin:0 auto;padding:24px}
     .hero{
       display:grid; gap:24px; align-items:center;
       grid-template-columns: 1.2fr .8fr;
-      padding: clamp(24px,5vw,56px) 0;
+      padding: clamp(18px,4.6vw,48px) 0;   /* encosta mais no topo */
     }
     .badge{
       display:inline-flex; gap:8px; align-items:center;
       background:linear-gradient(90deg,var(--brand),var(--brand-2));
-      color:#fff; padding:8px 14px; border-radius:999px; font-weight:600; font-size:.9rem;
+      color:#fff; padding:10px 16px; border-radius:999px; font-weight:800; font-size:1rem;
       box-shadow:var(--shadow)
     }
     h1{font-size: clamp(2rem, 5vw, 3.2rem); margin:10px 0 8px; line-height:1.1}
@@ -100,6 +127,7 @@
       .hero{grid-template-columns:1fr}
       .nights{grid-template-columns:1fr}
       .why{grid-template-columns:1fr}
+      .top-ribbon{justify-content:flex-start}
     }
   </style>
 
@@ -144,7 +172,7 @@
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  if(!f._fbq)f._fbq=n;n.push=n;n;n.loaded=!0;n.version='2.0';
   n.queue=[];t=b.createElement(e);t.async=!0;
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -156,9 +184,16 @@
   src="https://www.facebook.com/tr?id=1284878359977607&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
-
 </head>
+
 <body>
+  <!-- Faixa fixa no topo -->
+  <div class="top-ribbon" role="note" aria-label="Informação principal do evento">
+    <span class="pill">🎉 Workshop gratuito</span>
+    <span class="pill">🔴 Ao vivo no YouTube</span>
+    <span class="pill">📅 23–25/10 • 🕖 19h</span>
+  </div>
+
   <header class="wrap hero" role="banner" aria-label="Cabeçalho do workshop">
     <div>
       <span class="badge" aria-label="Workshop gratuito">Workshop gratuito • ao vivo no YouTube</span>
@@ -280,7 +315,6 @@
   <!-- RASTREAMENTO DE CLIQUES NO WHATSAPP (Lead) -->
   <script>
     // Gatilho de Lead ao clicar nos botões que levam ao WhatsApp
-    // Seleciona qualquer link com classe .js-whatsapp OU cujo href contenha chat.whatsapp.com
     (function(){
       function trackLead(e){
         try{
