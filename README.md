@@ -1,3 +1,4 @@
+
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
@@ -31,6 +32,7 @@
       /* Gradientes azuis para painéis e rodapé */
       --grad-blue: linear-gradient(90deg,#ecfeff 0%, #f5f3ff 100%);
       --grad-footer: linear-gradient(90deg, #6D5BD0 0%, #8F83E6 100%);
+      --grad-float: linear-gradient(90deg, #8F83E6, #6D5BD0);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -61,14 +63,22 @@
     /* Sem badge no hero */
     .badge{display:none}
 
-    /* Rótulo WORKSHOP acima do título */
+    /* Rótulo WORKSHOP com efeito de “carimbo” */
     .hero-kicker{
-      font-size:clamp(1.6rem,3.5vw,2.4rem);
+      font-size:clamp(1.8rem,3.8vw,2.8rem);
       font-weight:900;
-      letter-spacing:.08em;
-      color:#6D5BD0;
+      letter-spacing:.12em;
       text-transform:uppercase;
       margin-bottom:8px;
+      color:#6D5BD0;
+      position:relative;
+      transform:rotate(-0.8deg);
+      /* contorno + leve relevo */
+      -webkit-text-stroke: 2px #eef0ff;
+      text-shadow:
+        0 1px 0 #eef0ff,
+        0 2px 6px rgba(109,91,208,.25),
+        0 0 0 #eef0ff; /* ajuda em browsers sem stroke */
     }
 
     /* Título GRANDE e chamativo */
@@ -143,7 +153,23 @@
     }
     .illus small{display:block; color:#6d5bd0; font-weight:700}
 
-    /* Rodapé com contagem regressiva (único lugar) */
+    /* Botão flutuante pequeno com a contagem regressiva */
+    .float-mini{
+      position:fixed; right:16px; bottom:16px; z-index:1100;
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:999px;
+      background: var(--grad-float); color:#fff;
+      border:1px solid rgba(255,255,255,.3);
+      box-shadow: 0 14px 34px rgba(109,91,208,.35);
+      font-weight:800; letter-spacing:.02em; font-size:14px;
+    }
+    .float-mini .countdown{font-variant-numeric: tabular-nums; font-weight:900}
+    .float-mini .dot{opacity:.9}
+    @media (max-width:560px){
+      .float-mini{right:12px; bottom:12px; font-size:13px; padding:9px 11px}
+    }
+
+    /* Rodapé com contagem regressiva (único grande) */
     footer{
       margin-top:64px;
       background: var(--grad-footer);
@@ -239,7 +265,7 @@
         <span class="chip">📅 23, 24 e 25 de outubro</span>
         <span class="chip">🕖 19h (ao vivo)</span>
         <span class="chip">🎥 YouTube</span>
-        <!-- Countdown removido daqui por sua solicitação -->
+        <!-- Countdown do topo continua removido -->
       </div>
       <a class="cta js-whatsapp"
          href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
@@ -346,7 +372,12 @@
     </section>
   </main>
 
-  <!-- Rodapé com contagem regressiva (único lugar) -->
+  <!-- Botão flutuante pequeno com contagem regressiva (informativo) -->
+  <div class="float-mini" role="status" aria-live="polite" aria-label="Contagem regressiva para o início">
+    ⏳ <span class="countdown">Calculando…</span> <span class="dot">•</span> 19h
+  </div>
+
+  <!-- Rodapé com contagem regressiva (principal) -->
   <footer role="contentinfo" aria-label="Barra fixa com contagem regressiva e direitos autorais">
     <div class="footer-inner">
       <span class="footer-count">⏳ Começa em: <span class="countdown" aria-live="polite">Calculando…</span></span>
