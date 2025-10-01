@@ -57,14 +57,25 @@
     /* Sem badge no hero */
     .badge{display:none}
 
-    /* Título grande, leve e chamativo */
+    /* Título GRANDE e chamativo (atualizado) */
     h1{
-      font-size: clamp(2.8rem, 7.2vw, 4.8rem);
-      margin:6px 0 10px; line-height:1.05; font-weight:900; letter-spacing:.2px;
-      background: linear-gradient(90deg, #4338ca 0%, #7c6ee6 55%, #a89cf5 100%);
-      -webkit-background-clip:text; background-clip:text; color:transparent;
-      text-shadow: 0 2px 16px rgba(124,110,230,.18);
+      font-size: clamp(3.4rem, 8.5vw, 5.6rem); /* maior */
+      margin:10px 0 14px;
+      line-height:1.02;
+      font-weight:900;
+      letter-spacing:.3px;
+      text-align:left;
+
+      /* gradiente mais vivo */
+      background: linear-gradient(90deg, #4338ca 0%, #6D5BD0 40%, #8F83E6 80%, #a89cf5 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+
+      /* brilho suave pra destacar */
+      text-shadow: 0 4px 22px rgba(109,91,208,.25);
     }
+
     .sub{color:var(--muted); font-size: clamp(1rem, 2.2vw, 1.15rem); margin-bottom:18px}
 
     .meta{display:flex; gap:12px; flex-wrap:wrap; margin:10px 0 24px}
