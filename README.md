@@ -1,4 +1,3 @@
-
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
@@ -61,6 +60,16 @@
 
     /* Sem badge no hero */
     .badge{display:none}
+
+    /* Rótulo WORKSHOP acima do título */
+    .hero-kicker{
+      font-size:clamp(1.6rem,3.5vw,2.4rem);
+      font-weight:900;
+      letter-spacing:.08em;
+      color:#6D5BD0;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
 
     /* Título GRANDE e chamativo */
     h1{
@@ -134,7 +143,7 @@
     }
     .illus small{display:block; color:#6d5bd0; font-weight:700}
 
-    /* Rodapé fixo visualmente (barra) com countdown */
+    /* Rodapé com contagem regressiva (único lugar) */
     footer{
       margin-top:64px;
       background: var(--grad-footer);
@@ -158,6 +167,7 @@
     }
     .footer-count .countdown{font-variant-numeric: tabular-nums; font-weight:900}
 
+    h2{font-size:clamp(1.6rem,3.6vw,2.1rem); margin:0 0 6px; font-weight:900}
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
       .nights{grid-template-columns:1fr}
@@ -222,13 +232,14 @@
 <body>
   <header class="wrap hero" role="banner" aria-label="Cabeçalho do Workshop">
     <div>
+      <div class="hero-kicker">WORKSHOP</div>
       <h1>A Vida Que Eu Quero Viver</h1>
       <p class="sub">Três noites para soltar os barulhos da mente, liberar emoções que aprisionam e reescrever sua história com leveza.</p>
       <div class="meta" aria-label="Informações rápidas">
         <span class="chip">📅 23, 24 e 25 de outubro</span>
         <span class="chip">🕖 19h (ao vivo)</span>
         <span class="chip">🎥 YouTube</span>
-        <span class="chip">⏳ Começa em: <span class="countdown" aria-live="polite">Calculando…</span></span>
+        <!-- Countdown removido daqui por sua solicitação -->
       </div>
       <a class="cta js-whatsapp"
          href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t"
