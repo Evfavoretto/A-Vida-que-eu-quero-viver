@@ -25,6 +25,7 @@
       --warn:#FFC86B;
       --shadow: 0 10px 30px rgba(0,0,0,.35);
       --radius:16px;
+      --ribbon-h:56px; /* altura da barra fixa */
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -34,20 +35,20 @@
       background: radial-gradient(1200px 800px at 70% -10%, #222455 0%, transparent 60%) , var(--bg);
       color:var(--text);
       line-height:1.5;
+      padding-top: var(--ribbon-h); /* compensa a barra fixa */
     }
 
-    /* 🔧 FORÇAR a remoção do cabeçalho/título padrão do GitHub Pages */
+    /* Remove header/título padrão do GitHub Pages */
     .site-header, .page-header, header.page-header, .project-name, .project-tagline,
     .Header, .AppHeader, .application-main > header,
-    .markdown-body > h1:first-child,                        /* alguns temas empurram um H1 azul */
-    body > header[role="banner"].site-header,               /* tema padrão */
-    body > .page-header                                    /* fallback */
-    { display:none !important; height:0 !important; overflow:hidden !important; }
+    .markdown-body > h1:first-child,
+    body > header[role="banner"].site-header,
+    body > .page-header { display:none !important; height:0 !important; overflow:hidden !important; }
 
-    /* Faixa fixa no topo (reforça Workshop gratuito • ao vivo) */
+    /* Barra fixa no topo */
     .top-ribbon{
-      position:sticky; top:0; z-index:1000;
-      display:flex; justify-content:center; gap:12px; align-items:center; flex-wrap:wrap;
+      position:fixed; inset:0 0 auto 0; height:var(--ribbon-h);
+      z-index:1000; display:flex; justify-content:center; gap:12px; align-items:center; flex-wrap:wrap;
       padding:10px 14px;
       background:linear-gradient(90deg,var(--brand),var(--brand-2));
       color:#fff; box-shadow:0 8px 24px rgba(0,0,0,.35);
@@ -66,15 +67,24 @@
     .hero{
       display:grid; gap:24px; align-items:center;
       grid-template-columns: 1.2fr .8fr;
-      padding: clamp(18px,4.6vw,48px) 0;   /* encosta mais no topo */
+      padding: clamp(18px,4.6vw,48px) 0;
     }
-    .badge{
-      display:inline-flex; gap:8px; align-items:center;
-      background:linear-gradient(90deg,var(--brand),var(--brand-2));
-      color:#fff; padding:10px 16px; border-radius:999px; font-weight:800; font-size:1rem;
-      box-shadow:var(--shadow)
+
+    /* 👇 escondi o badge do hero como você pediu */
+    .badge{display:none}
+
+    /* H1 bem chamativo */
+    h1{
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      margin:6px 0 10px;
+      line-height:1.05;
+      font-weight:900;
+      letter-spacing:.2px;
+      background:linear-gradient(90deg,#fff 0%, #cfc9ff 60%, #9a8eff 100%);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow: 0 2px 18px rgba(157,140,255,.18);
     }
-    h1{font-size: clamp(2rem, 5vw, 3.2rem); margin:10px 0 8px; line-height:1.1}
+
     .sub{color:var(--muted); font-size: clamp(1rem, 2.2vw, 1.15rem); margin-bottom:18px}
     .cta{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
@@ -101,10 +111,8 @@
       display:flex; align-items:center; gap:10px; color:#111; background:linear-gradient(90deg,#D1F7EC,#F6F0FF);
       border-radius:12px; padding:12px 14px; font-weight:600;
     }
-    .sticky-bar{
-      position:sticky; bottom:12px; z-index:100;
-      display:flex; justify-content:center;
-    }
+    .notice a{color:#0b7; font-weight:800; text-decoration:underline}
+    .sticky-bar{ position:sticky; bottom:12px; z-index:100; display:flex; justify-content:center; }
     .sticky-inner{
       backdrop-filter: blur(10px);
       background: rgba(21, 23, 53, .75);
@@ -127,7 +135,6 @@
       .hero{grid-template-columns:1fr}
       .nights{grid-template-columns:1fr}
       .why{grid-template-columns:1fr}
-      .top-ribbon{justify-content:flex-start}
     }
   </style>
 
@@ -172,7 +179,7 @@
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n;n.loaded=!0;n.version='2.0';
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
   n.queue=[];t=b.createElement(e);t.async=!0;
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -187,7 +194,7 @@
 </head>
 
 <body>
-  <!-- Faixa fixa no topo -->
+  <!-- Barra fixa -->
   <div class="top-ribbon" role="note" aria-label="Informação principal do evento">
     <span class="pill">🎉 Workshop gratuito</span>
     <span class="pill">🔴 Ao vivo no YouTube</span>
@@ -196,7 +203,7 @@
 
   <header class="wrap hero" role="banner" aria-label="Cabeçalho do workshop">
     <div>
-      <span class="badge" aria-label="Workshop gratuito">Workshop gratuito • ao vivo no YouTube</span>
+      <!-- badge removido -->
       <h1>A Vida Que Eu Quero Viver</h1>
       <p class="sub">3 Noites para soltar os barulhos da mente, liberar emoções que aprisionam e reescrever sua história com leveza.</p>
       <div class="meta" aria-label="Informações rápidas">
@@ -229,7 +236,9 @@
         O passado não muda — mas o peso que você carrega dele pode mudar. Em três noites, vamos sair do automático,
         diminuir o barulho interno e criar um caminho real de leveza.
       </p>
-      <div class="notice" role="note">📩 Para participar, basta clicar no botão e entrar no grupo de WhatsApp.</div>
+      <div class="notice" role="note">
+        📩 Para participar, basta clicar no botão ou <a href="https://chat.whatsapp.com/CeXf6hjhBziAzvXl9HGFFp?mode=ems_copy_t" target="_blank" rel="noopener" class="link-what">entrar no grupo de WhatsApp</a>.
+      </div>
     </section>
 
     <section class="grid nights" aria-labelledby="noites" style="margin-top:22px">
@@ -314,25 +323,20 @@
 
   <!-- RASTREAMENTO DE CLIQUES NO WHATSAPP (Lead) -->
   <script>
-    // Gatilho de Lead ao clicar nos botões que levam ao WhatsApp
     (function(){
-      function trackLead(e){
+      function trackLead(){
         try{
           fbq && fbq('track', 'Lead', {
             content_name: 'WhatsApp Group Join',
             content_category: 'Workshop A Vida Que Eu Quero Viver',
-            value: 0.00,
-            currency: 'BRL'
+            value: 0.00, currency: 'BRL'
           });
         }catch(err){}
       }
       document.addEventListener('click', function(ev){
-        const a = ev.target.closest('a');
-        if(!a) return;
+        const a = ev.target.closest('a'); if(!a) return;
         const href = a.getAttribute('href') || '';
-        if (a.classList.contains('js-whatsapp') || href.includes('chat.whatsapp.com')){
-          trackLead();
-        }
+        if (a.classList.contains('js-whatsapp') || href.includes('chat.whatsapp.com')) trackLead();
       }, true);
     })();
   </script>
